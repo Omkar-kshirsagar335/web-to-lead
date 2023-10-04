@@ -20,7 +20,7 @@ function timestamp() {
       } 
      } 
      setInterval(timestamp, 500); 
-     //okk
+     //okkk
      function capt(){
         cap=true;
      }
