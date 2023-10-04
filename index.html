@@ -11,7 +11,7 @@
 <body>
 <h1>Create Lead</h1>
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"
-    onsubmit="beforesubmit()">
+    onsubmit="beforesubmit(event)">
     <input type=hidden name='captcha_settings' value='{"keyname":"WebtoLead","fallback":"true","orgId":"00D5g00000GYN6W","ts":""}'>
 
     <input type=hidden name="oid" value="00D5g00000GYN6W" >
@@ -31,7 +31,7 @@
    <!-- njsLead Date:<span class="dateInput dateOnlyInput"><input  id="00N5g00000dC9m2" name="00N5g00000dC9m2" size="12" type="text" /></span><br>*/-->
     
     <input type="submit" name="submit" class="submit" >
-    <div class="g-recaptcha" data-sitekey="6LeEf3QoAAAAAHS5Jt71utuRTwGplP7NyE_pKxII"></div><br>
+    <div class="g-recaptcha" data-callback="capt()" data-sitekey="6LeEf3QoAAAAAHS5Jt71utuRTwGplP7NyE_pKxII"></div><br>
     </form>
 
     

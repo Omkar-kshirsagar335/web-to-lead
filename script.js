@@ -1,9 +1,15 @@
-function beforesubmit(){
-let outputdate= document.querySelector(".outputdate");
-let inputdate= document.querySelector(".inputdate");
-     console.log('date'+typeof   inputdate.value);
-     let formatedDate =new Date(inputdate.value).toLocaleDateString("en-US");
-     outputdate.value=formatedDate;
+let cap =false;
+function beforesubmit(event){if(cap) {
+    let outputdate= document.querySelector(".outputdate");
+    let inputdate= document.querySelector(".inputdate");
+         console.log('date'+typeof   inputdate.value);
+         let formatedDate =new Date(inputdate.value).toLocaleDateString("en-US");
+         outputdate.value=formatedDate;
+        }else{
+            alert("please check the recaptcha box")
+            event.preventDefault();
+        }
+
 }
 function timestamp() {
       var response = document.getElementById("g-recaptcha-response"); 
@@ -15,3 +21,6 @@ function timestamp() {
      } 
      setInterval(timestamp, 500); 
      //okk
+     function capt(){
+        cap=true;
+     }
